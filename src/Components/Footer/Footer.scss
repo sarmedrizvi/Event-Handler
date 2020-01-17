@@ -1,0 +1,86 @@
+.footer {
+  background: rgb(14, 13, 13);
+  padding: 10vw 2vw;
+  padding-bottom: 0px;
+  display: grid;
+  //   justify-content: center;
+  .line {
+    color: rgb(87, 85, 85);
+  }
+}
+
+.footer1 {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 20vh;
+  justify-content: space-around;
+  .footer1-aboutus {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer1-quick {
+  }
+  .footer1-follow {
+    display: flex;
+    flex-direction: column;
+    //    justify-content: center;
+    //    align-items: center;
+  }
+  .footer1-sub {
+    .footer1-sub-part {
+      display: flex;
+
+      .footer1-sub-textbox {
+        height: 5vh;
+        background: transparent;
+        color: white;
+        border: 1px rgb(194, 194, 194) solid;
+        padding: 5px;
+        border-radius: 5px 0px 0px 5px;
+        outline: none !important;
+        &:hover {
+          border-color: white;
+        }
+      }
+      .button {
+        min-height: 6vh;
+        border-radius: 0px 25px 25px 0px;
+        border: none;
+        background: rgb(3, 181, 204);
+        color: white;
+        padding: 5px;
+        min-width: 6vw;
+        outline: none !important ;
+        cursor: pointer;
+        &:hover {
+          background: rgb(1, 151, 156);
+        }
+      }
+    }
+  }
+  .para {
+    width: 20vw;
+    color: rgb(168, 167, 167);
+    text-align: center;
+  }
+  .title {
+    // display: inline !important;
+    color: white;
+    margin: 0px;
+    padding: 0px 0px 30px 0px;
+    font-size: 18px;
+    font-family: "EB Garamond", serif;
+    text-align: center;
+  }
+
+  .hover {
+    &:hover {
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+  }
+}
+.copyright {
+  color: rgb(168, 167, 167);
+  text-align: center;
+}

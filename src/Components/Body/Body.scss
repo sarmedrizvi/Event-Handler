@@ -1,0 +1,25 @@
+.main-body {
+  // filter: blur(0.9px);
+  height: 38em;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  // top: -30em ;
+  margin-right: 8px;
+  .main-item {
+    width: 280px;
+    padding: 0px 15vw;
+    text-align: center;
+    .main-title {
+
+      color: rgb(250, 250, 250);
+      font-family: "EB Garamond", serif;
+      font-size: 40px;
+      font-weight: bolder;
+
+    }
+  }
+}

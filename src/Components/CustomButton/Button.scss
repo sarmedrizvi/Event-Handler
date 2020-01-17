@@ -1,0 +1,33 @@
+.inputButton{
+  min-width: 170px;
+  width: auto;
+  height: 50px;
+  letter-spacing: 0.5px;
+  line-height: 50px;
+  padding: 0 35px 0 35px;
+  font-size: 15px;
+  color: white;
+  background-color: rgb(3, 181, 204);
+  text-transform: uppercase;
+  font-family: 'Grenze', serif;
+  font-weight: bolder;
+  border: none;
+  cursor: pointer;
+  border-radius: 30px ;
+  outline: none !important ;
+
+  &:hover {
+    background-color: white;
+    color: black;
+    border: 0.2px solid black;
+  }
+  &.GoogleButton{
+    background-color: #4285f4;
+    color: white;
+
+    &:hover{
+      background-color: #2765ca;
+      border: none;
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.event-title {
+  .title {
+    display: flex;
+    justify-content: space-between;
+    font-family: "EB Garamond", serif;
+    .main-title {
+      font-size: 30px;
+      font-weight: bolder;
+      padding: 15px 10px;
+    }
+    .button {
+      display: flex;
+      flex-wrap: wrap;
+
+      button {
+        margin: 12px 3px;
+      }
+    }
+  }
+
+  hr {
+    width: 70vw;
+    height: 2px;
+    background-color: rgb(1, 151, 156);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .button {
+    display: grid !important;
+  }
+  .main-title{
+	  padding: 50px 15px !important;
+  }
+}
