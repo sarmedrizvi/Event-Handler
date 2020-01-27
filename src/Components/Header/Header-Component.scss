@@ -1,75 +1,60 @@
-.main-header {
-  // box-shadow: rgb(36, 35, 35) 0px 5px 15px, inset rgb(41, 41, 41) 0px -10px 20px;
+.mains {
   display: flex;
-  // background:
-  // radial-gradient(black 15%, transparent 16%) 0 0,
-  // radial-gradient(black 15%, transparent 16%) 8px 8px,
-  // radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 0 1px,
-  // radial-gradient(rgba(255,255,255,.1) 15%, transparent 20%) 8px 9px;
-  // background-color:#282828;
-  // background-size:16px 16px;
+  justify-content: space-between;
   font-family: "EB Garamond", serif;
-  position: fixed;
-  -webkit-tap-highlight-color: rgba(158, 156, 156, 0);
+  position: absolute;
   overflow: hidden;
-  padding-bottom: 0px;
   width: 100%;
   top: 0;
-  z-index: 1;
+  height: 60px;
   margin: 0px;
-  padding: 5px 0px;
-  padding-top: 20px;
+  padding: 20px 0px;
+  z-index: 1;
 
-  img {
-    width: 100px;
-    background-color: transparent;
-  }
-  .Text {
-    justify-self: center;
-    width: 100%;
-  }
   &.positionSticky {
-    background:
-    linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
-    linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
-    linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
-    linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
-    linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
-    linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
-    background-color: #131313;
-    background-size: 20px 20px; 
+    background-color: black;
     transition: all 1s linear;
     &:hover {
       box-shadow: rgb(36, 35, 35) 0px 5px 15px,
         inset rgb(41, 41, 41) 0px -10px 20px;
     }
   }
-
-  .main-title {
-    margin: 0.1px;
-    font-size: 1.6em;
+  img {
+    width: 100px;
     background-color: transparent;
-    color: rgb(245, 244, 244);
-    cursor: alias;
-    text-align: center;
   }
-
-  .main-points {
-    padding: 0.8vw 5vw;
+  .main-header {
+    padding: 4px 16px;
+    width: 100%;
     display: flex;
-    font-weight: bold;
-    justify-content: center;
-    .point {
-      font-size: 1.1em;
-      margin: 0px 1.4vw;
-      cursor: pointer;
-      list-style: none;
-      & a {
-        text-decoration: none;
-        color: rgb(245, 244, 244);
+    justify-content: space-between;
+    .part1 {
+      display: flex;
+      padding: 0px 10px;
+    }
+    .part2 {
+      display: flex;
+    
+      .header-part {
+        cursor: pointer;
+        &:hover {
+          background-color: rgb(126, 124, 124);
+        }
+      }
+      .header-part {
+        display: flex;
+        flex-direction: column;
+        color: white;
+        padding: 5px 23px;
       }
     }
   }
 }
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 980px) {
+  .main-header {
+    justify-content: flex-end !important;
+    .part1 {
+      display: none !important;
+    }
+  }
 }

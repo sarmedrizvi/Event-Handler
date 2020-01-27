@@ -1,0 +1,59 @@
+.upcoming {
+  border: 0.5px solid rgb(126, 129, 129);
+  display: grid;
+  position: relative;
+  font-family: "Gelasio", serif;
+  .logos {
+    position: absolute;
+    left: 57%;
+    top: 50%;
+    i {
+      box-shadow: rgba(121, 120, 120, 0.171) 0px 5px 15px;
+      cursor: pointer;
+      margin: 5px;
+      padding: 15px;
+      border-radius: 30px;
+      background-color: white;
+    }
+  }
+  .display-none{
+    display: none;
+  }
+  .FreeButton {
+    position: absolute;
+    box-shadow: rgba(121, 120, 120, 0.171) 0px 5px 15px;
+    left: 73%;
+    top: 5%;
+    color: rgb(136, 133, 133);
+    background: white;
+    border: 1px solid white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    
+  }
+  .upcoming-event {
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    img {
+      width: 97%;
+      height: 25vh;
+      margin: 5px;
+    }
+  }
+
+  .upcoming-event-detail {
+    display: grid;
+    gap: 10px;
+    justify-content: start;
+
+    span {
+      padding: 0px 10px;
+      font-weight: bolder;
+
+      &.date {
+        color: rgb(196, 32, 32);
+      }
+    }
+  }
+}

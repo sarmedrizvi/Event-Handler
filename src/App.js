@@ -1,18 +1,15 @@
 import React from 'react';
-
 import './App.css';
-import { Header } from './Components/Header/Header-Component';
-import { Footer } from './Components/Footer/Footer';
-import { Body } from './Components/Body/Body';
-import { EventHome } from './Components/Event/EventHome/EventHome';
-
+import { EventHome } from './Components/pages/EventHome/EventHome';
+import { Switch, Route } from "react-router-dom";
+import { CreateEvent } from './Components/pages/EventHome/CreateEvent/CreateEvent';
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Body />
-      <EventHome/>
-      <Footer />
+      <Switch>
+        <Route exact path='/' component={EventHome}></Route>
+        <Route exact path='/createEvent' component={CreateEvent}></Route>
+      </Switch>
     </div>
   );
 }

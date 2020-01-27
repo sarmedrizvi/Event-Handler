@@ -4,7 +4,8 @@ import './Body.scss'
 import background1 from '../../assets/background1.jpg'
 import background2 from '../../assets/background2.jpg'
 import background3 from '../../assets/background3.jpg'
-
+import background from '../../assets/background.jpg'
+import { BodySide } from './Body-Part/BodySide'
 
 let i = 0;
 export class Body extends React.Component {
@@ -35,18 +36,20 @@ export class Body extends React.Component {
 
     render() {
         const divstyle = {
-            background: `white url(${this.state.background})  center / cover no-repeat fixed`,
+            background: `white url(${this.state.background})  center / 100% 100% no-repeat fixed`,
         }
 
         return (
-            < div id='body' >
-                <div className='main-body' style={divstyle} >
-                    <div className='main-item'>
-                        <h1 className='main-title'>“Any time is a good time to start a company.” -Ron Conway</h1>
-                        {/* <InputButton OnClick={raiseInvoiceClicked} >Join Us</InputButton> */}
+            <div id='body' className='body' >
+                <div className='main-body' style={{ background: `url(${background}) center / cover no-repeat fixed` }} >
+                    <div className='main'>
+                        <div className='main-item' style={divstyle}>
+                            <h1 className='main-title'>“Any time is a good time to start a company.” -Ron Conway</h1>
+                        </div>
+                        <BodySide />
                     </div>
                 </div>
-            </div >
+            </div>
         )
     }
 }

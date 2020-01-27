@@ -1,15 +1,16 @@
 import React from 'react'
-import { CustomButton } from '../../CustomButton/Button'
+// import { CustomButton } from '../../CustomButton/Button'
 import './EventAdder.scss'
+// import CustomizedTabs from '../../Tabs/Tab'
+
 export const EventAdder = () => (
 	<div className='event-title'>
 		<div className='title'>
-			<span className='main-title'>Upcoming Events</span>
-			<div className='button'>
-				<CustomButton>Add Event</CustomButton>
-				<CustomButton>Edit Event</CustomButton>
-			</div>
+			<span className='main-title'>Search Events</span>
 		</div>
-		<hr/>
+		<hr />
+		<div className='custom-tab'>
+			{/* <CustomizedTabs tabsArray={['All', "For You", "This Weekend", "Free", "Music", "Food & Drink", "Charity & Causes"]} /> */}
+		</div>
 	</div>
 )

@@ -1,10 +1,23 @@
 import React from 'react'
 import './Header-Component.scss'
 import logo from '../../assets/log.png'
-export class Header extends React.Component {
+import { TextBox } from '../CustomTextBox/TextBox'
+import { Emoji } from '../Emoji/Emoji'
+import { withRouter } from 'react-router-dom'
+
+
+const HeaderPart = ({ type, symbol,...otherProps }) => (
+    <div className='header-part'>
+        <Emoji symbol={symbol} />
+        <span {...otherProps}>{type}</span>
+    </div>
+)
+
+class Header extends React.Component {
     state = {
         scroll: 'top'
     }
+
     listenScrollEvent = e => {
         if (window.scrollY > 300) {
             this.setState({ scroll: 'bottom' })
@@ -19,33 +32,29 @@ export class Header extends React.Component {
 
     scrolling = () => {
         if (this.state.scroll === 'top')
-            return 'main-header'
+            return 'mains'
         else
-            return 'main-header positionSticky'
+            return 'mains positionSticky'
     }
 
     render() {
         return (
-
             <div className={this.scrolling()}>
                 <img src={logo} alt='' />
-                <div className='Text'>
-                    <span className='main-title'>Event Handler</span>
-                    <ul className={'main-points'}>
-
-                        <li className='point'><a href='#body'>Home</a></li>
-                        <li className='point' ><a href='#about'>About Us</a></li>
-                        <li className='point'><a href='#portfolio'>Events</a></li>
-                        {/* <li className='point show'><a href='#services'>Services</a></li> */}
-                        {/* <li className='point show'><a href='#testimonial'>Testimonials</a></li> */}
-                        {/* <li className='point show'><a href='#'>Blogs</a></li> */}
-                        <li className='point'><a href='#contactus'>Contact</a></li>
-                        {/* <li className='point icon show' onClick={this.MenuDown}><span className="fa fa-bars fa-2x">
-                        </span></li> */}
-                    </ul>
+                <div className='main-header'>
+                    <div className='part1'>
+                        <TextBox />
+                    </div>
+                    <div className='part2'>
+                        <HeaderPart type='Create Event' symbol='&#10010;' onClick={()=>this.props.history.push('/createEvent')} />
+                        <HeaderPart type='Likes' symbol='&#9825;' />
+                        <HeaderPart type='Tickets' symbol='&#9929;' />
+                    </div>
 
                 </div>
             </div>
         )
     }
 }
+
+export default withRouter(Header)

@@ -1,0 +1,14 @@
+.transition {
+  padding: 12px 0px;
+  
+  // .event-change{
+  //   display: flex;
+  // }
+  .event-transition {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 17.9rem);
+    gap: 15px;
+    justify-content: center;
+    padding: 10px 0px;
+  }
+}

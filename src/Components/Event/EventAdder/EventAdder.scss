@@ -1,12 +1,15 @@
 .event-title {
+  padding: 60px 25px;
   .title {
+    padding: 0px 60px;
     display: flex;
     justify-content: space-between;
     font-family: "EB Garamond", serif;
+   
     .main-title {
       font-size: 30px;
       font-weight: bolder;
-      padding: 15px 10px;
+      color: rgb(71, 71, 71);
     }
     .button {
       display: flex;
@@ -14,8 +17,15 @@
 
       button {
         margin: 12px 3px;
+        font-size: 13px;
+
       }
     }
+  }
+  
+   
+  .custom-tab{
+    
   }
 
   hr {
@@ -26,9 +36,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .button {
-    display: grid !important;
-  }
+  
   .main-title{
 	  padding: 50px 15px !important;
   }
